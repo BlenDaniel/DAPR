@@ -2,15 +2,14 @@ import React from "react";
 import NavDropDownItem from "./NavDropDownItem";
 import { BeakerIcon } from "@heroicons/react/24/outline";
 import logo from "../../../assets/svg/logo.svg";
+import { useCoverStore } from "../../State";
 
-type HeaderProps = {
-  userState: boolean;
-  onLogout: () => void;
-};
 
-const Header: React.FC<HeaderProps> = ({ userState, onLogout }) => {
+
+function Header() {
   const [open, setOpen] = React.useState(false);
   const [flyer, setFlyer] = React.useState(false);
+  const { userState, onLogout } = useCoverStore();
 
   return (
     <>
@@ -328,6 +327,6 @@ const Header: React.FC<HeaderProps> = ({ userState, onLogout }) => {
       </div>
     </>
   );
-};
+}
 
 export default Header;

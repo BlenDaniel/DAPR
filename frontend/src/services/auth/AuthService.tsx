@@ -1,10 +1,9 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8000/api/auth/";
+const API_URL = "http://localhost:8080/api/v1/users/";
 
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
-axios.defaults.headers.common["Access-Control-Allow-Methods"] =
-  "GET, POST, PUT, DELETE";
+axios.defaults.headers.common["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE";
 axios.defaults.headers.common["Access-Control-Allow-Headers"] = "Content-Type";
 
 class AuthService {
@@ -18,7 +17,6 @@ class AuthService {
         if (response.data) {
           localStorage.setItem("user", JSON.stringify(response.data));
         }
-
         return response.data;
       });
   }
