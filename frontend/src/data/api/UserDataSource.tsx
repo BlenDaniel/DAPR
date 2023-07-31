@@ -1,7 +1,7 @@
 import User from "../../types/user.type";
 import axios from "axios";
 
-const API_URL = "your_api_url";
+const API_URL = "http://localhost:8080/api/v1/";
 
 export async function getAll(): Promise<{ error: string | null; result: User[] | null }> {
   try {
@@ -60,15 +60,15 @@ export async function deleteOne(
   }
 }
 
-export async function update(
-  id: string,
-  UserData: { name: string; price: number }
-): Promise<{ error: string | null; result: boolean }> {
-  try {
-    await axios.put(`${API_URL}/users/${id}`, UserData);
+// export async function update(
+//   id: string,
+//   UserData: { name: string; price: number }
+// ): Promise<{ error: string | null; result: boolean }> {
+//   try {
+//     await axios.put(`${API_URL}/users/${id}`, UserData);
 
-    return Promise.resolve({ error: null, result: true });
-  } catch (error: any) {
-    return Promise.resolve({ error: error.message, result: false });
-  }
-}
+//     return Promise.resolve({ error: null, result: true });
+//   } catch (error: any) {
+//     return Promise.resolve({ error: error.message, result: false });
+//   }
+// }

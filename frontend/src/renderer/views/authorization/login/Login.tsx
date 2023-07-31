@@ -43,7 +43,7 @@ export default function Login() {
               />
               <ErrorMessage
                 name="email"
-                render={(msg) => <Error message={msg}></Error>}
+                render={(msg: string) => <Error message={msg}></Error>}
               />
             </div>
             <div className="text-left my-4">
@@ -56,7 +56,7 @@ export default function Login() {
               />
               <ErrorMessage
                 name="password"
-                render={(msg) => <Error message={msg}></Error>}
+                render={(msg: string) => <Error message={msg}></Error>}
               />
             </div>
             <div className="flex items-center justify-between text-sm my-4">
@@ -68,7 +68,7 @@ export default function Login() {
                 <span>Remember me</span>
               </div>
               <a
-                href="javascript:void(0)"
+                href="/register"
                 className="text-center text-indigo-600 hover:text-indigo-500"
               >
                 Forgot password?

@@ -9,7 +9,7 @@ import { useCoverStore } from "../../State";
 function Header() {
   const [open, setOpen] = React.useState(false);
   const [flyer, setFlyer] = React.useState(false);
-  const { userState, onLogout } = useCoverStore();
+  const { currentUser, onLogout } = useCoverStore();
 
   return (
     <>
@@ -140,7 +140,7 @@ function Header() {
               </a>
             </nav>
             {/* Sign up/Sign in */}
-            {userState ? (
+            {currentUser ? (
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
                   href=""
@@ -292,7 +292,7 @@ function Header() {
                 </a>
                
               </div>
-              {userState ? (
+              {currentUser ? (
                 <div>
                   <a
                     href="/login"

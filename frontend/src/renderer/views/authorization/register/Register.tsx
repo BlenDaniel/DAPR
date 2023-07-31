@@ -57,7 +57,7 @@ export default function Register() {
                     />
                     <ErrorMessage
                       name="username"
-                      render={(msg) => <Error message={msg}></Error>}
+                      render={(msg: string) => <Error message={msg}></Error>}
                     />
                   </div>
                   <div className="my-5">
@@ -70,7 +70,7 @@ export default function Register() {
                     />
                     <ErrorMessage
                       name="email"
-                      render={(msg) => <Error message={msg}></Error>}
+                      render={(msg: string) => <Error message={msg}></Error>}
                     />
                   </div>
                   <div className="my-5">
@@ -83,7 +83,7 @@ export default function Register() {
                     />
                     <ErrorMessage
                       name="password"
-                      render={(msg) => <Error message={msg}></Error>}
+                      render={(msg: string) => <Error message={msg}></Error>}
                     />
                   </div>
                 </div>

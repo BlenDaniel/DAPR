@@ -1,21 +1,24 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/v1/users/";
+const API_URL = "http://localhost:8080/api/v1/auth/";
 
 axios.defaults.headers.common["Access-Control-Allow-Origin"] = "*";
 axios.defaults.headers.common["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE";
 axios.defaults.headers.common["Access-Control-Allow-Headers"] = "Content-Type";
 
 class AuthService {
+  
   login(email: string, password: string) {
+    
     return axios
-      .post(API_URL + "signin", {
-        email,
-        password,
+      .post(API_URL + "login", {
+       "usernameOrEmail" : email,
+       "password": password,
       })
       .then((response) => {
         if (response.data) {
           localStorage.setItem("user", JSON.stringify(response.data));
+          localStorage.setItem("token", JSON.stringify(response.data));
         }
         return response.data;
       });
@@ -26,10 +29,8 @@ class AuthService {
   }
 
   register(username: string, email: string, password: string) {
-    const id = "hello2";
     return axios
-      .post(API_URL + "signup", {
-        id,
+      .post(API_URL + "register", {
         username,
         email,
         password,

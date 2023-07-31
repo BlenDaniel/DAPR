@@ -1,8 +1,10 @@
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 import * as Yup from "yup";
 
 import AuthService from "../../../../services/auth/AuthService";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import { useCoverStore } from "../../../../State";
+import EventBus from "../../../../utils/EventBus";
 
 interface LoginViewModel {
   loading: boolean;
@@ -14,10 +16,9 @@ interface LoginViewModel {
 
 export default function LogInViewModel(): LoginViewModel {
   const navigate = useNavigate();
+  const { setCurrentUser, onLogout } = useCoverStore();
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-
-  
 
   const validationSchema = Yup.object().shape({
     email: Yup.string().required("This field is required!"),
@@ -33,11 +34,14 @@ export default function LogInViewModel(): LoginViewModel {
     AuthService.login(email, password)
       .then(() => {
         window.location.reload();
-        navigate(`/home/community/`);
+        setCurrentUser(AuthService.getCurrentUser());
+        navigate(`/home/coverletter/`);
       })
       .catch((error: any) => {
         const resMessage =
-          (error.response && error.response.data && error.response.data.message) ||
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
           error.message ||
           error.toString();
 
@@ -45,12 +49,16 @@ export default function LogInViewModel(): LoginViewModel {
         setMessage(resMessage);
       });
   };
+  // Use the useEffect hook to register and unregister the logout event listener
+  useEffect(() => {
+    EventBus.on("logout", onLogout);
+  }, []); // Add onLogout as a dependency
 
   const checkCurrentUser = () => {
     const currentUser = AuthService.getCurrentUser();
 
     if (currentUser) {
-      navigate(`/home/community/`);
+      navigate(`/home/coverletter/`);
     }
   };
 
@@ -62,4 +70,3 @@ export default function LogInViewModel(): LoginViewModel {
     checkCurrentUser,
   };
 }
-
