@@ -4,8 +4,6 @@ import { BeakerIcon } from "@heroicons/react/24/outline";
 import logo from "../../../assets/svg/logo.svg";
 import { useCoverStore } from "../../State";
 
-
-
 function Header() {
   const [open, setOpen] = React.useState(false);
   const [flyer, setFlyer] = React.useState(false);
@@ -55,7 +53,7 @@ function Header() {
                 <button
                   type="button"
                   className="
-                   group bg-white rounded-md text-gray-500 inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 pb-8'
+                   group bg-white rounded-md text-gray-500 inline-flex items-center text-base   hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 pb-8'
                   "
                   onClick={() => setFlyer(!flyer)}
                 >
@@ -90,18 +88,18 @@ function Header() {
                   <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                       <NavDropDownItem
+                        onClick={() => null}
                         children={
                           <BeakerIcon className="h-6 w-6 text-blue-500" />
                         }
                         title={"Communities"}
-                        text={"Browse through Constructor University communties"}
                       ></NavDropDownItem>
                     </div>
                     <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                       <div className="flow-root">
                         <a
                           href="#"
-                          className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
+                          className="-m-3 p-3 flex items-center rounded-md text-base   text-gray-900 hover:bg-gray-100"
                         >
                           {/* Heroicon name: outline/phone */}
                           <svg
@@ -128,13 +126,13 @@ function Header() {
               </div>
               <a
                 href="about"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                className="text-base   text-gray-500 hover:text-gray-900"
               >
                 About us
               </a>
               <a
                 href="contact"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                className="text-base   text-gray-500 hover:text-gray-900"
               >
                 Contact Us
               </a>
@@ -144,7 +142,7 @@ function Header() {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
                   href=""
-                  className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="whitespace-nowrap text-base   text-gray-500 hover:text-gray-900"
                   onClick={onLogout}
                 >
                   Log out
@@ -154,13 +152,13 @@ function Header() {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a
                   href="/login"
-                  className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="whitespace-nowrap text-base   text-gray-500 hover:text-gray-900"
                 >
                   Sign in
                 </a>
                 <a
                   href="/register"
-                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                  className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base   text-white bg-indigo-600 hover:bg-indigo-700"
                 >
                   Sign up
                 </a>
@@ -244,7 +242,7 @@ function Header() {
                         d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                       />
                     </svg>
-                    <span className="ml-3 text-base font-medium text-gray-900">
+                    <span className="ml-3 text-base   text-gray-900">
                       Browse Communities
                     </span>
                   </a>
@@ -268,11 +266,10 @@ function Header() {
                         d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
                       />
                     </svg>
-                    <span className="ml-3 text-base font-medium text-gray-900">
+                    <span className="ml-3 text-base   text-gray-900">
                       Feature your community
                     </span>
                   </a>
-                 
                 </nav>
               </div>
             </div>
@@ -280,23 +277,22 @@ function Header() {
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                  className="text-base   text-gray-900 hover:text-gray-700"
                 >
                   About us
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
+                  className="text-base   text-gray-900 hover:text-gray-700"
                 >
                   Contact
                 </a>
-               
               </div>
               {currentUser ? (
                 <div>
                   <a
                     href="/login"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base   text-white bg-indigo-600 hover:bg-indigo-700"
                     onClick={onLogout}
                   >
                     Log out
@@ -306,11 +302,11 @@ function Header() {
                 <div>
                   <a
                     href="/register"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base   text-white bg-indigo-600 hover:bg-indigo-700"
                   >
                     Sign up
                   </a>
-                  <p className="mt-6 text-center text-base font-medium text-gray-500">
+                  <p className="mt-6 text-center text-base   text-gray-500">
                     Existing customer?
                     <a
                       href="/login"

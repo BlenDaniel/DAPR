@@ -33,9 +33,9 @@ export default function LogInViewModel(): LoginViewModel {
 
     AuthService.login(email, password)
       .then(() => {
-        window.location.reload();
-        setCurrentUser(AuthService.getCurrentUser());
-        navigate(`/home/coverletter/`);
+       window.location.reload();
+       setCurrentUser(AuthService.getCurrentUser());
+       navigate(`/home/coverletter/`);
       })
       .catch((error: any) => {
         const resMessage =

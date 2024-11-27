@@ -10,6 +10,9 @@ import { useCoverStore } from "./State";
 import AuthService from "./services/auth/AuthService";
 import EventBus from "./utils/EventBus";
 import CoverLetter from "./renderer/views/coverletter/CoverLetter";
+import Paragraph from "./renderer/components/Paragraph";
+import InvoiceView from "./renderer/views/letter/Invoice";
+import Home from "./renderer/views/home/Home";
 
 function App() {
   const { setCurrentUser , onLogout } = useCoverStore();
@@ -26,8 +29,11 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/home" element={<Index />} />
+          <Route path="/home" element={<Home />} />
+          
           <Route path="/home/coverletter/*" element={<CoverLetter />} />
+          <Route path="/invoice" element={<InvoiceView />} />
+          <Route path="/paragraph" element={<Paragraph />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />

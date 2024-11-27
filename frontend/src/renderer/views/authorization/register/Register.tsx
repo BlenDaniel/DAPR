@@ -30,7 +30,7 @@ export default function Register() {
               Already have an account?{" "}
               <a
                 href="/login"
-                className="font-medium text-indigo-600 hover:text-indigo-500"
+                className="  text-indigo-600 hover:text-indigo-500"
               >
                 Log in
               </a>
@@ -47,7 +47,7 @@ export default function Register() {
               {!successful && (
                 <div className="text-left">
                   <div className="my-5">
-                    <label className="font-medium">Username</label>
+                    <label className=" ">Username</label>
 
                     <Field
                       name="username"
@@ -61,7 +61,7 @@ export default function Register() {
                     />
                   </div>
                   <div className="my-5">
-                    <label className="font-medium">Email</label>
+                    <label className=" ">Email</label>
                     <Field
                       name="email"
                       type="email"
@@ -74,7 +74,7 @@ export default function Register() {
                     />
                   </div>
                   <div className="my-5">
-                    <label className="font-medium">Password</label>
+                    <label className=" ">Password</label>
                     <Field
                       name="password"
                       type="password"
@@ -91,7 +91,7 @@ export default function Register() {
 
               <button
                 type="submit"
-                className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                className="w-full px-4 py-2 text-white   bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
               >
                 Create account
               </button>
@@ -110,7 +110,7 @@ export default function Register() {
             </Form>
           </Formik>
           <div className="mt-5">
-            <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+            <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm   hover:bg-gray-50 duration-150 active:bg-gray-100">
               <svg
                 className="w-5 h-5"
                 viewBox="0 0 48 48"

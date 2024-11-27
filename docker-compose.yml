@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: my-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+  
+  api:
+    build: ./api
+    volumes:
+      - ./api:/usr/src/api
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    networks:
+      - caddy
+    labels:
+      caddy: make.momentumresearch.eu tuspl22-momentum.srv.mwn.de
+      caddy.handle_path: /api/*
+      caddy.handle_path.0_rewrite: "* /api{uri}"
+      caddy.handle_path.1_reverse_proxy: "{{upstreams 8000}}"
+  web:
+    restart: unless-stopped
+    build: ./frontend
+    networks:
+      - caddy
+    ports:
+      - 3000:3000
+    labels:
+      caddy: make.momentumresearch.eu tuspl22-momentum.srv.mwn.de
+      caddy.handle_path: /*
+      caddy.handle_path.0_reverse_proxy: "{{upstreams 3000}}"
+

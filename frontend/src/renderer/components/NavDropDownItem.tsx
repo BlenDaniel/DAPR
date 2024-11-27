@@ -1,26 +1,25 @@
 import { ReactElement } from "react";
 
-export default function NavDropDownItem({
-  children,
-  title,
-  text,
-}: {
+type NavDropDownItemProps = {
   children: ReactElement;
   title: string;
-  text: string;
-}) {
+  onClick: () => void;
+};
+
+export default function NavDropDownItem({ children, title, onClick }: NavDropDownItemProps) {
   return (
     <>
       <a
         href="#"
-        className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+        className="m-3 p-2 flex items-start rounded-lg hover:bg-gray-50"
+        onClick={onClick}
       >
         {children}
         <div className="text-left ml-4">
-          <p className="text-base font-medium text-gray-900">{title}</p>
-          <p className="mt-1 text-sm text-gray-500">{text}</p>
+          <p className="text-base   text-gray-900">{title}</p>
         </div>
       </a>
     </>
   );
 }
+

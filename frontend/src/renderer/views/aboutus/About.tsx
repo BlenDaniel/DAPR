@@ -55,7 +55,7 @@ class About extends Component<Props, State> {
                                 stats.map((item, idx) => (
                                     <li key={idx} className="">
                                         <h4 className="text-4xl text-indigo-600 font-semibold">{item.data}</h4>
-                                        <p className="mt-3 font-medium">{item.title}</p>
+                                        <p className="mt-3  ">{item.title}</p>
                                     </li>
                                 ))
                             }
