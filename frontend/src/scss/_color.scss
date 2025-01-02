@@ -1,0 +1,29 @@
+@use "variables";
+
+.dark {
+  color: variables.$color-dark;
+}
+
+.white {
+  color: variables.$color-white;
+}
+
+.bg-white {
+  background-color: variables.$color-white;
+}
+
+.bg-dark {
+  background-color: variables.$color-dark-2;
+}
+
+.bg-gray {
+  background-color: variables.$color-gray;
+}
+
+.bg-red {
+  background-color: variables.$color-red;
+}
+
+.bg-green {
+  background-color: variables.$color-green;
+}
