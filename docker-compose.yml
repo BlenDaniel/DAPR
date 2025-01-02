@@ -1,37 +1,23 @@
-version: "3.7"
+version: '3.8'
 
 services:
-  mongodb:
-    image: mongo:latest
-    container_name: my-mongodb
+  frontend:
+    build: 
+      context: ./frontend
+    image: dacontainers/daapp
+    container_name: frontend
     ports:
-      - "27017:27017"
+      - "8080:8080"
     volumes:
-      - ./data:/data/db
-  
-  api:
-    build: ./api
-    volumes:
-      - ./api:/usr/src/api
-    restart: unless-stopped
-    ports:
-      - 8000:8000
-    networks:
-      - caddy
-    labels:
-      caddy: make.momentumresearch.eu tuspl22-momentum.srv.mwn.de
-      caddy.handle_path: /api/*
-      caddy.handle_path.0_rewrite: "* /api{uri}"
-      caddy.handle_path.1_reverse_proxy: "{{upstreams 8000}}"
+      - appdata:/usr/local/tomcat/webapps
+
   web:
     restart: unless-stopped
-    build: ./frontend
-    networks:
-      - caddy
+    build: ./web
+    image: dacontainers/daweb
     ports:
-      - 3000:3000
-    labels:
-      caddy: make.momentumresearch.eu tuspl22-momentum.srv.mwn.de
-      caddy.handle_path: /*
-      caddy.handle_path.0_reverse_proxy: "{{upstreams 3000}}"
-
+      - "80:80"
+      - "443:443"
+   
+volumes:
+  appdata: {}

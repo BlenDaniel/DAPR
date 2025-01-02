@@ -1,0 +1,146 @@
+[
+    {
+        "id": "1",
+        "engTitle": "Property Management Team",
+        "gerTitle": "Hausverwaltungsteam",
+        "engSentence": "Dear Wienkler GmbH property management team,",
+        "gerSentence": "Sehr geehrtes Team der Hausverwaltung Wienkler GmbH,",
+        "guideId": "101",
+        "imageUrl": "/images/property_team.png"
+    },
+    {
+        "id": "2",
+        "engTitle": "Property Manager",
+        "gerTitle": "Hausverwalter",
+        "engSentence": "Dear Mr Wienkler,",
+        "gerSentence": "Sehr geehrter Herr Wienkler,",
+        "guideId": "102",
+        "imageUrl": "/images/manager.png"
+    },
+    {
+        "id": "3",
+        "engTitle": "Introduction",
+        "gerTitle": "Einleitung",
+        "engSentence": "My name is Thomas Schmitz.",
+        "gerSentence": "Mein Name ist Thomas Schmitz.",
+        "guideId": "103",
+        "imageUrl": "/images/introduction.png"
+    },
+    {
+        "id": "4",
+        "engTitle": "Residence",
+        "gerTitle": "Wohnort",
+        "engSentence": "I live in your house at Uecker Str. 7 on the second floor.",
+        "gerSentence": "Ich wohne in ihrem Haus in der Uecker Str. 7 in der zweiten Etage.",
+        "guideId": "104",
+        "imageUrl": "/images/address.png"
+    },
+    {
+        "id": "5",
+        "engTitle": "Contact Reason",
+        "gerTitle": "Kontaktgrund",
+        "engSentence": "I am contacting you because we have a small problem in the house.",
+        "gerSentence": "Ich wende mich an Sie, weil wir im Haus ein kleines Problem haben.",
+        "guideId": "105",
+        "imageUrl": "/images/problem.png"
+    },
+    {
+        "id": "6",
+        "engTitle": "Dirty Areas",
+        "gerTitle": "Schmutzige Bereiche",
+        "engSentence": "Not only the stairwell, but also the lift is always dirty.",
+        "gerSentence": "Nicht nur das Treppenhaus, sondern auch der Aufzug ist immer schmutzig.",
+        "guideId": "106",
+        "imageUrl": "/images/dirty_areas.png"
+    },
+    {
+        "id": "7",
+        "engTitle": "Efforts",
+        "gerTitle": "Bemühungen",
+        "engSentence": "Both my wife and I clean the whole stairwell every week.",
+        "gerSentence": "Sowohl meine Frau als auch ich putzen jede Woche das ganze Treppenhaus.",
+        "guideId": "107",
+        "imageUrl": "/images/cleaning.png"
+    },
+    {
+        "id": "8",
+        "engTitle": "Inactivity",
+        "gerTitle": "Untätigkeit",
+        "engSentence": "The other residents in the house do nothing.",
+        "gerSentence": "Die anderen Bewohner des Hauses tun nichts.",
+        "guideId": "108",
+        "imageUrl": "/images/inactivity.png"
+    },
+    {
+        "id": "9",
+        "engTitle": "Smoking Issue",
+        "gerTitle": "Rauchproblem",
+        "engSentence": "There are also residents who smoke in the stairwell.",
+        "gerSentence": "Es gibt auch Bewohner, die im Treppenhaus rauchen.",
+        "guideId": "109",
+        "imageUrl": "/images/smoking.png"
+    },
+    {
+        "id": "10",
+        "engTitle": "Unpleasant Living",
+        "gerTitle": "Unangenehmes Wohnen",
+        "engSentence": "It is therefore very unpleasant to live in this house.",
+        "gerSentence": "Es ist deshalb sehr unangenehm, in diesem Haus zu wohnen.",
+        "guideId": "110",
+        "imageUrl": "/images/unpleasant.png"
+    },
+    {
+        "id": "11",
+        "engTitle": "Request to Talk",
+        "gerTitle": "Bitte um Gespräch",
+        "engSentence": "Could you please talk to all the residents of the building about these problems?",
+        "gerSentence": "Könnten Sie bitte mit allen Bewohnern des Hauses über diese Probleme sprechen?",
+        "guideId": "111",
+        "imageUrl": "/images/discussion.png"
+    },
+    {
+        "id": "12",
+        "engTitle": "Inform Neighbors",
+        "gerTitle": "Nachbarn informieren",
+        "engSentence": "And could you please inform our neighbours that smoking in the stairwell is prohibited?",
+        "gerSentence": "Und könnten Sie bitte unsere Nachbarn darauf hinweisen, dass das Rauchen im Treppenhaus verboten ist?",
+        "guideId": "112",
+        "imageUrl": "/images/inform.png"
+    },
+    {
+        "id": "13",
+        "engTitle": "Cleaning Staff",
+        "gerTitle": "Reinigungspersonal",
+        "engSentence": "Could you perhaps find a cleaning lady and ask her to clean our stairwell at least twice a week?",
+        "gerSentence": "Könnten Sie vielleicht eine Putzfrau finden und sie beauftragen, mindestens zweimal pro Woche unser Treppenhaus zu reinigen?",
+        "guideId": "113",
+        "imageUrl": "/images/cleaning_staff.png"
+    },
+    {
+        "id": "14",
+        "engTitle": "Thankfulness",
+        "gerTitle": "Dankbarkeit",
+        "engSentence": "Thank you for your understanding and for your help.",
+        "gerSentence": "Ich bedanke mich für ihr Verständnis und für ihre Hilfe.",
+        "guideId": "114",
+        "imageUrl": "/images/thank_you.png"
+    },
+    {
+        "id": "15",
+        "engTitle": "Closing",
+        "gerTitle": "Schlusswort",
+        "engSentence": "Yours sincerely,",
+        "gerSentence": "Mit freundlichen Grüßen,",
+        "guideId": "115",
+        "imageUrl": "/images/closing.png"
+    },
+    {
+        "id": "16",
+        "engTitle": "Signature",
+        "gerTitle": "Unterschrift",
+        "engSentence": "Thomas Schmitz",
+        "gerSentence": "Thomas Schmitz",
+        "guideId": "116",
+        "imageUrl": "/images/signature.png"
+    }
+]

@@ -1,3 +1,5 @@
+@use "variables";
+
 .block {
   display: block;
 }
@@ -58,7 +60,7 @@
 
 .row {
   position: relative;
-  border-bottom: 1px solid $color-gray;
+  border-bottom: 1px solid variables.$color-gray;
 }
 
 .row__remove {

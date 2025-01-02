@@ -1,32 +1,34 @@
-import React, { FC } from 'react'
-import { Text } from '@react-pdf/renderer'
-import compose from '../../styles/compose'
-
+import React, { FC } from 'react';
 
 interface Props {
-  className?: string
-  placeholder?: string
-  value?: string
-  onChange?: (value: string) => void
-  pdfMode?: boolean
+  className?: string;
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
 }
 
-const EditableInput: FC<Props> = ({ className, placeholder, value, onChange, pdfMode }) => {
+const EditableInput: FC<Props> = ({
+  className = '',
+  placeholder = '',
+  value = '',
+  onChange,
+}) => {
+  // Handle change event for the input
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(event.target.value); // Call the onChange prop if provided
+    }
+  };
+
   return (
-    <>
-      {pdfMode ? (
-        <Text style={compose('span ' + (className ? className : ''))}>{value}</Text>
-      ) : (
-        <input
-          type="text"
-          className={'input ' + (className ? className : '')}
-          placeholder={placeholder || ''}
-          value={value || ''}
-          onChange={onChange ? (e) => onChange(e.target.value) : undefined}
-        />
-      )}
-    </>
-  )
-}
+    <input
+      type="text" // Input type set to text
+      className={`editable-input ${className}`} // Apply custom class names
+      placeholder={placeholder} // Set placeholder text
+      value={value} // Bind value to the input
+      onChange={handleChange} // Handle change events
+    />
+  );
+};
 
-export default EditableInput
+export default EditableInput;

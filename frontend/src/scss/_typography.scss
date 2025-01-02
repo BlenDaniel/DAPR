@@ -1,8 +1,10 @@
+@use "variables";
+
 body {
   font-family: Nunito, sans-serif;
   font-size: 14px;
   color: #555;
-  background: $background-color;
+  background: variables.$background-color;
   padding: 0;
   margin: 0;
 }
@@ -12,7 +14,7 @@ body {
 }
 
 ::placeholder {
-  color: $placeholder-color;
+  color: variables.$placeholder-color;
   opacity: 1;
 }
 
@@ -47,7 +49,7 @@ button.link {
   align-items: center;
   background: transparent;
   border: 0;
-  color: $color-blue;
+  color: variables.$color-blue;
 
   &:hover,
   &:focus {
@@ -55,7 +57,7 @@ button.link {
   }
 
   &:focus {
-    outline: 1px dotted $color-cyan;
+    outline: 1px dotted variables.$color-cyan;
     opacity: 1;
   }
 }

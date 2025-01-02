@@ -1,5 +1,5 @@
 export default interface User {
-    id?: any | null,
+    id?: string | null,
     username?: string | null,
     email?: string,
     password?: string,

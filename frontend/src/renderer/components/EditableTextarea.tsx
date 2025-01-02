@@ -1,40 +1,34 @@
-import React, { FC } from 'react'
-import TextareaAutosize from 'react-textarea-autosize'
-import { Text } from '@react-pdf/renderer'
-import compose from '../../styles/compose'
+import React, { FC } from 'react';
 
 interface Props {
-  className?: string
-  placeholder?: string
-  value?: string
-  onChange?: (value: string) => void
-  pdfMode?: boolean
-  rows?: number
+  className?: string;
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
 }
 
 const EditableTextarea: FC<Props> = ({
-  className,
-  placeholder,
-  value,
+  className = '',
+  placeholder = '',
+  value = '',
   onChange,
-  pdfMode,
-  rows,
 }) => {
-  return (
-    <>
-      {pdfMode ? (
-        <Text style={compose('span ' + (className ? className : ''))}>{value}</Text>
-      ) : (
-        <TextareaAutosize
-          minRows={rows || 1}
-          className={'input ' + (className ? className : '')}
-          placeholder={placeholder || ''}
-          value={value || ''}
-          onChange={onChange ? (e) => onChange(e.target.value) : undefined}
-        />
-      )}
-    </>
-  )
-}
+  // Handle change event for the textarea
+  const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    if (onChange) {
+      onChange(event.target.value); // Call the onChange prop if provided
+    }
+  };
 
-export default EditableTextarea
+  return (
+    <textarea
+      className={`editable-textarea ${className}`} // Apply custom class names
+      placeholder={placeholder} // Set placeholder text
+      value={value} // Bind value to the textarea
+      onChange={handleChange} // Handle change events
+      rows={3} // Set default number of rows
+    />
+  );
+};
+
+export default EditableTextarea;

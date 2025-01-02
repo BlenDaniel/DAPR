@@ -51,3 +51,14 @@ export interface Invoice {
 export interface CSSClasses {
   [key: string]: CSSProperties
 }
+
+interface Project {
+  id: string;
+  image: string;
+  title: string;
+  description: string;
+  additionalImages?: string[];
+}
+
+export default Project;
+

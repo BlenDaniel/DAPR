@@ -1,0 +1,128 @@
+[
+    {
+        "id": "1",
+        "engTitle": "Salutation",
+        "gerTitle": "Anrede",
+        "engSentence": "Dear Mrs Spitz,",
+        "gerSentence": "Sehr geehrte Frau Spitz,",
+        "guideId": "101",
+        "imageUrl": "/images/salutation.png"
+    },
+    {
+        "id": "2",
+        "engTitle": "Introduction",
+        "gerTitle": "Einleitung",
+        "engSentence": "My name is Sandra Bauer, I am the mother of Stefan Bauer.",
+        "gerSentence": "Mein Name ist Sandra Bauer, ich bin die Mutter von Stefan Bauer.",
+        "guideId": "101",
+        "imageUrl": "/images/introduction.png"
+    },
+    {
+        "id": "3",
+        "engTitle": "Reason for Contact",
+        "gerTitle": "Grund für Kontakt",
+        "engSentence": "I am contacting you because my son will not be able to come to school for a week.",
+        "gerSentence": "Ich wende mich an Sie, weil mein Sohn eine Woche lang nicht in die Schule kommen kann.",
+        "guideId": "101",
+        "imageUrl": "/images/reason_for_contact.png"
+    },
+    {
+        "id": "4",
+        "engTitle": "Injury Explanation",
+        "gerTitle": "Erklärung der Verletzung",
+        "engSentence": "He was playing football with his friends at the weekend and injured his left leg.",
+        "gerSentence": "Er hat am Wochenende mit seinen Freunden Fußball gespielt und dabei sein linkes Bein verletzt.",
+        "guideId": "101",
+        "imageUrl": "/images/football_injury.png"
+    },
+    {
+        "id": "5",
+        "engTitle": "Doctor Visit",
+        "gerTitle": "Arztbesuch",
+        "engSentence": "We went to the doctor about it.",
+        "gerSentence": "Wir waren deshalb beim Arzt.",
+        "guideId": "101",
+        "imageUrl": "/images/doctor_visit.png"
+    },
+    {
+        "id": "6",
+        "engTitle": "Doctor's Advice",
+        "gerTitle": "Ratschlag des Arztes",
+        "engSentence": "The doctor said that Stefan will have to stay at home for at least a week.",
+        "gerSentence": "Der Arzt hat gesagt, dass Stefan mindestens eine Woche zu Hause bleiben muss.",
+        "guideId": "101",
+        "imageUrl": "/images/doctor_advice.png"
+    },
+    {
+        "id": "7",
+        "engTitle": "Hope for Recovery",
+        "gerTitle": "Hoffnung auf Genesung",
+        "engSentence": "I hope that Stefan will be back at school next Monday.",
+        "gerSentence": "Ich hoffe, dass Stefan am nächsten Montag wieder am Unterricht teilnehmen wird.",
+        "guideId": "101",
+        "imageUrl": "/images/recovery.png"
+    },
+    {
+        "id": "8",
+        "engTitle": "Certificate Information",
+        "gerTitle": "Information über Bescheinigung",
+        "engSentence": "I will send you the doctor's certificate by post today.",
+        "gerSentence": "Die Bescheinigung des Arztes wende ich Ihnen heute per Post senden.",
+        "guideId": "101",
+        "imageUrl": "/images/certificate.png"
+    },
+    {
+        "id": "9",
+        "engTitle": "Request for Homework",
+        "gerTitle": "Bitte um Hausaufgaben",
+        "engSentence": "I have a request for you. Could you please send us the homework by e-mail?",
+        "gerSentence": "Ich hätte eine Bitte an Sie. Könnten Sie uns bitte die Hausaufgaben per E-Mail senden?",
+        "guideId": "101",
+        "imageUrl": "/images/homework_request.png"
+    },
+    {
+        "id": "10",
+        "engTitle": "Email Address",
+        "gerTitle": "E-Mail-Adresse",
+        "engSentence": "My e-mail address is: tttt@tttt.de",
+        "gerSentence": "Meine E-Mail-Adresse lautet: tttt@tttt.de",
+        "guideId": "101",
+        "imageUrl": "/images/email.png"
+    },
+    {
+        "id": "11",
+        "engTitle": "Contact Information",
+        "gerTitle": "Kontaktinformation",
+        "engSentence": "You can reach me by phone at this number: 12345.",
+        "gerSentence": "Sie erreichen mich telefonisch unter dieser Nummer: 12345.",
+        "guideId": "101",
+        "imageUrl": "/images/contact.png"
+    },
+    {
+        "id": "12",
+        "engTitle": "Gratitude",
+        "gerTitle": "Dankbarkeit",
+        "engSentence": "Thank you for your understanding and for your help.",
+        "gerSentence": "Ich bedanke mich bei Ihnen für Ihr Verständnis und für Ihre Hilfe.",
+        "guideId": "101",
+        "imageUrl": "/images/thank_you.png"
+    },
+    {
+        "id": "13",
+        "engTitle": "Closing",
+        "gerTitle": "Schlusswort",
+        "engSentence": "Yours sincerely,",
+        "gerSentence": "Mit freundlichen Grüßen,",
+        "guideId": "101",
+        "imageUrl": "/images/closing.png"
+    },
+    {
+        "id": "14",
+        "engTitle": "Signature",
+        "gerTitle": "Unterschrift",
+        "engSentence": "Sandra Bauer",
+        "gerSentence": "Sandra Bauer",
+        "guideId": "101",
+        "imageUrl": "/images/signature.png"
+    }
+]

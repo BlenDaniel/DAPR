@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Header from "../../components/Header";
+
 
 type Props = object;
 
@@ -14,8 +14,6 @@ class Contact extends Component<Props, State> {
   render() {
     return (
       <>
-        <Header />
-
         <main className="py-14">
           <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
             <div className="max-w-lg mx-auto space-y-3 sm:text-center">

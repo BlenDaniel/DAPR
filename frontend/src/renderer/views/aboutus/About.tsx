@@ -1,5 +1,4 @@
 import { Component } from "react";
-import Header from "../../components/Header";
 
 type Props = object;
 
@@ -11,7 +10,6 @@ type State = {
 class About extends Component<Props, State> {
 
   render() {
-    const { userState, } = this.state;
     const stats = [
       {
           data: "35K",
@@ -33,8 +31,6 @@ class About extends Component<Props, State> {
 
     return (
       <>
-        <Header />
-     
         <section className="py-14">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 gap-x-12 items-start justify-between lg:flex md:px-8">
                 <div className="sm:hidden lg:block lg:max-w-xl">

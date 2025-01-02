@@ -1,27 +1,29 @@
+@use "variables";
+
 .dark {
-  color: $color-dark;
+  color: variables.$color-dark;
 }
 
 .white {
-  color: $color-white;
+  color: variables.$color-white;
 }
 
 .bg-white {
-  background-color: $color-white;
+  background-color: variables.$color-white;
 }
 
 .bg-dark {
-  background-color: $color-dark-2;
+  background-color: variables.$color-dark-2;
 }
 
 .bg-gray {
-  background-color: $color-gray;
+  background-color: variables.$color-gray;
 }
 
 .bg-red {
-  background-color: $color-red;
+  background-color: variables.$color-red;
 }
 
 .bg-green {
-  background-color: $color-green;
+  background-color: variables.$color-green;
 }

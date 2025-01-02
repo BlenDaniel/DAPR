@@ -1,0 +1,111 @@
+[
+    
+    {
+        "id": "0",
+        "engTitle": "Stomach",
+        "gerTitle": "Der Magen",
+        "engSentence": "Sami has a stomachache.",
+        "gerSentence": "Sami hat Magenschmerzen.",
+        "guideId": "103",
+        "imageUrl": "/images/stomach.png"
+    },
+    {
+        "id": "1",
+        "engTitle": "Hello",
+        "gerTitle": "Hallo",
+        "engSentence": "This is a greeting.",
+        "gerSentence": "Das ist eine Begrüßung.",
+        "guideId": "101",
+        "imageUrl": "/images/hello.png"
+    },
+    {
+        "id": "2",
+        "engTitle": "Goodbye",
+        "gerTitle": "Auf Wiedersehen",
+        "engSentence": "This is a farewell.",
+        "gerSentence": "Das ist ein Abschied.",
+        "guideId": "102",
+        "imageUrl": "/images/goodbye.png"
+    },
+    {
+        "id": "4",
+        "engTitle": "Persuade",
+        "gerTitle": "Überreden",
+        "engSentence": "Ella can still persuade Sami to go for a walk.",
+        "gerSentence": "Ella kann Sami trotzdem zu einem Spaziergang überreden.",
+        "guideId": "104",
+        "imageUrl": "/images/persuade.png"
+    },
+    {
+        "id": "5",
+        "engTitle": "Agree",
+        "gerTitle": "Vereinbaren",
+        "engSentence": "Sami tells Ella that he was able to work more relaxed after the walk and has already agreed to the appointment with the doctor.",
+        "gerSentence": "Sami erzählt, dass er nach dem Spaziergang schon viel entspannter arbeiten konnte und den Termin beim Arzt schon vereinbart hat.",
+        "guideId": "105",
+        "imageUrl": "/images/agree.png"
+    },
+    {
+        "id": "6",
+        "engTitle": "Middle",
+        "gerTitle": "Das Mittel",
+        "engSentence": "Seven very simple anti-stress remedies.",
+        "gerSentence": "Sieben ganz einfache Anti-Stress-Mittel.",
+        "guideId": "106",
+        "imageUrl": "/images/middle.png"
+    },
+    {
+        "id": "7",
+        "engTitle": "Sleep",
+        "gerTitle": "Der Schlaf",
+        "engSentence": "Too little sleep is one of the worst stress factors.",
+        "gerSentence": "Zu wenig Schlaf ist einer der schlimmsten Stressfaktoren.",
+        "guideId": "107",
+        "imageUrl": "/images/sleep.png"
+    },
+    {
+        "id": "8",
+        "engTitle": "Factor",
+        "gerTitle": "Der Faktor",
+        "engSentence": "Too little sleep is one of the worst stress factors.",
+        "gerSentence": "Zu wenig Schlaf ist einer der schlimmsten Stressfaktoren.",
+        "guideId": "108",
+        "imageUrl": "/images/factor.png"
+    },
+    {
+        "id": "9",
+        "engTitle": "At night",
+        "gerTitle": "Nachts",
+        "engSentence": "Those who sleep well at night can better endure the stress of the day.",
+        "gerSentence": "Wer nachts gut schläft, kann den Stress des Tages viel besser aushalten.",
+        "guideId": "109",
+        "imageUrl": "/images/night.png"
+    },
+    {
+        "id": "10",
+        "engTitle": "Basis",
+        "gerTitle": "Die Grundlage",
+        "engSentence": "Regular healthy sleep is the basis of any relaxation.",
+        "gerSentence": "Regelmäßiger gesunder Schlaf ist die Grundlage jeder Entspannung.",
+        "guideId": "110",
+        "imageUrl": "/images/basis.png"
+    },
+    {
+        "id": "11",
+        "engTitle": "Sufficient",
+        "gerTitle": "Ausreichend",
+        "engSentence": "Particularly pay attention to sufficient movement during work and leisure time.",
+        "gerSentence": "Auf ausreichend Bewegung bei der Arbeit und in der Freizeit sollte besonders geachtet werden.",
+        "guideId": "111",
+        "imageUrl": "/images/sufficient.png"
+    },
+    {
+        "id": "12",
+        "engTitle": "Pay attention",
+        "gerTitle": "Achten",
+        "engSentence": "Particularly pay attention to sufficient movement during work and leisure time.",
+        "gerSentence": "Auf ausreichend Bewegung bei der Arbeit und in der Freizeit sollte besonders geachtet werden.",
+        "guideId": "112",
+        "imageUrl": "/images/pay_attention.png"
+    }
+]

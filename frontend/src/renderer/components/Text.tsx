@@ -1,6 +1,4 @@
-import React, { FC } from 'react'
-import ReactPDF, { Text as PdfText } from '@react-pdf/renderer'
-import compose from '../../styles/compose'
+import { FC } from 'react';
 import { Style } from '../../model/style';
 
 
@@ -13,15 +11,12 @@ interface Props {
 
 }
 
-const Text: FC<Props> = ({ className, pdfMode, children, style }) => {
+const Text: FC<Props> = ({ className, children }) => {
   return (
     <>
-      {pdfMode ? (
-        <PdfText style={style || compose('span ' + (className || ''))}
-        >{children}</PdfText>
-      ) : (
+      (
         <span className={'span ' + (className ? className : '')}>{children}</span>
-      )}
+      )
     </>
   )
 }

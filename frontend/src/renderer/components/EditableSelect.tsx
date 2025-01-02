@@ -1,6 +1,4 @@
-import React, { FC, useState } from 'react'
-import { Text } from '@react-pdf/renderer'
-import compose from '../../styles/compose'
+import{ FC, useState } from 'react'
 
 
 export interface SelectOption {
@@ -23,15 +21,12 @@ const EditableSelect: FC<Props> = ({
   placeholder,
   value,
   onChange,
-  pdfMode,
 }) => {
   const [isEditing, setIsEditing] = useState<boolean>(false)
 
   return (
     <>
-      {pdfMode ? (
-        <Text style={compose('span ' + (className ? className : ''))}>{value}</Text>
-      ) : (
+      (
         <>
           {isEditing ? (
             <select
@@ -58,7 +53,7 @@ const EditableSelect: FC<Props> = ({
             />
           )}
         </>
-      )}
+      )
     </>
   )
 }

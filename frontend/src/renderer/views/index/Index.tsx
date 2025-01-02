@@ -1,11 +1,18 @@
+import { AboutShort } from "../../components/AboutShort";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header";
+import { OurProjects } from "../../components/OurProjects";
+import Slideshow from "../../components/Slideshow";
+import { MissionStatments } from "../../components/Mission";
+import { FAQ } from "@/renderer/components/FAQ";
 
 function Index() {
   return (
     <>
-      <Header />
-
+      <Slideshow
+        companyName={"Daniel Assefa"}
+        otherText={"Practicing Architecture"}
+      />
+      <AboutShort />
       <div>
         <section className="mt-24 mx-auto max-w-screen-xl pb-12 px-4 items-center lg:flex md:px-8">
           <div className="space-y-4 flex-1 sm:text-center lg:text-left">
@@ -20,14 +27,12 @@ function Index() {
             <div className="pt-10 items-center justify-center space-y-3 sm:space-x-6 sm:space-y-0 sm:flex lg:justify-start">
               <a
                 href="/register"
-                className="px-7 py-3 w-full bg-white text-gray-800 text-center rounded-md shadow-md block sm:w-auto"
-              >
+                className="px-7 py-3 w-full bg-white text-gray-800 text-center rounded-md shadow-md block sm:w-auto">
                 Get started
               </a>
               <a
                 href="/login"
-                className="px-7 py-3 w-full bg-gray-700 text-gray-200 text-center rounded-md block sm:w-auto"
-              >
+                className="px-7 py-3 w-full bg-gray-700 text-gray-200 text-center rounded-md block sm:w-auto">
                 I am already a member
               </a>
             </div>
@@ -40,7 +45,9 @@ function Index() {
           </div>
         </section>
       </div>
-
+      <OurProjects />
+      <MissionStatments />
+      <FAQ />
       <Footer />
     </>
   );
