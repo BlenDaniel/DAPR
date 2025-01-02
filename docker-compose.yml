@@ -7,17 +7,26 @@ services:
     image: dacontainers/daapp
     container_name: frontend
     ports:
-      - "8080:8080"
-    volumes:
-      - appdata:/usr/local/tomcat/webapps
+      - "3000:3000"
+    networks:
+      - app-network
 
   web:
     restart: unless-stopped
+    container_name: web
     build: ./web
     image: dacontainers/daweb
     ports:
       - "80:80"
       - "443:443"
-   
+    networks:
+      - app-network
+    depends_on:
+      - frontend
+
+networks:
+  app-network:
+    driver: bridge
+
 volumes:
   appdata: {}
