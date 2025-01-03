@@ -4,6 +4,8 @@ sudo apt-get update
 sudo apt-get install \
     ca-certificates \
     curl \
+    zip \
+    unzip \ 
     gnupg -y
 
 sudo install -m 0755 -d /etc/apt/keyrings
