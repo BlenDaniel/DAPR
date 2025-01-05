@@ -6,6 +6,7 @@ sudo apt-get install \
     curl \
     zip \
     unzip \ 
+    git \
     gnupg -y
 
 sudo install -m 0755 -d /etc/apt/keyrings
