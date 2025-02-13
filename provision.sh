@@ -20,3 +20,5 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 sudo apt install docker-compose 
+
+docker compose run --rm certbot certonly --webroot --webroot-path /var/www/certbot/ --dry-run -d blen.cc

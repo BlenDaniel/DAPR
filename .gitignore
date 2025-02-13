@@ -39,5 +39,10 @@ package-lock.json
 /api/target
 *git .env
 
-frontend/pnpm-lock.yaml
-frontend/playwright-report/
+frontend(outdated)/
+resume/
+web/
+website/
+provision.sh
+README.md
+
