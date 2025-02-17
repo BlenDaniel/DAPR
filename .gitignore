@@ -40,6 +40,9 @@ package-lock.json
 *git .env
 
 frontend(outdated)/
+frontend(almost)/
+frontend(notworking)/
+frontend(old)/
 resume/
 web/
 website/
