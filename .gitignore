@@ -39,13 +39,4 @@ package-lock.json
 /api/target
 *git .env
 
-frontend(outdated)/
-frontend(almost)/
-frontend(notworking)/
-frontend(old)/
-resume/
-web/
-website/
-provision.sh
-Notes.md
 
