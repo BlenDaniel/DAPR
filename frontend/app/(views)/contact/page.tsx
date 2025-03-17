@@ -1,23 +1,17 @@
 import React from "react";
+import Layout from "@/app/components/Layout/index";
+import Container from "@/app/components/ui/Container";
+import ContactForm from "@/app/components/ContactForm";
 
-import Layout from "@/app/components/Layout";
-import ContactInfo from "@/app/components/ContactInfo";
-
-const ContactPage: React.FC = () => {
-  return (
-    <Layout siteTitle="">
-      <>
-        {/* <SEO title="Contact" /> */}
-        <ContactInfo
-          sectionTitle={{
-            title: "Contanct Us",
-            subtitle: "",
-          }}
-          contacts={[]}
-        />
-      </>
-    </Layout>
-  );
-};
+const ContactPage: React.FC = () => (
+  <Layout>
+    <>
+      {/* <SEO title="Contact" /> */}
+      <Container section>
+        <ContactForm />
+      </Container>
+    </>
+  </Layout>
+);
 
 export default ContactPage;

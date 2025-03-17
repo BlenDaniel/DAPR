@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { AnimatePresence } from "framer-motion";
-import Head from "next/head";
+// Remove Head import as it's not compatible with app router
+// import Head from "next/head";
 
 import Footer from "../Footer";
 import Newsletter from "../Newsletter";
@@ -11,15 +14,13 @@ import MotionDiv from "./motionDiv";
 
 interface Props {
   children: React.ReactNode;
-  siteTitle: string; // Pass site title as a prop
+  // Remove siteTitle prop as it's no longer used
 }
 
-const Layout: React.FC<Props> = ({ children, siteTitle }) => {
+const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+      {/* Remove Head component as it's not compatible with app router */}
       <AnimatePresence mode="wait">
         <Styled.Layout>
           <Header />

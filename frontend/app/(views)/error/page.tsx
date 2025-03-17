@@ -4,7 +4,7 @@ import TitleSection from "@/app/components/ui/TitleSection";
 import Layout from "@/app/components/Layout/index";
 
 const NotFoundPage: React.FC = () => (
-  <Layout siteTitle="">
+  <Layout>
     <>
       {/* <SEO title="404: Not found" /> */}
       <Container section={true}>

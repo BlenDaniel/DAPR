@@ -1,22 +1,21 @@
 import React from "react";
-
-import Layout from "@/app/components/Layout";
-import Experience from "@/app/components/Experience";
-import Education from "@/app/components/Education";
-import Skills from "@/app/components/Skills";
+import Layout from "@/app/components/Layout/index";
+import Container from "@/app/components/ui/Container";
+import TitleSection from "@/app/components/ui/TitleSection";
+import FormatHtml from "@/app/components/utils/FormatHtml";
 
 const ResumePage: React.FC = () => (
-  <Layout siteTitle="">
+  <Layout>
     <>
       {/* <SEO title="Resume" /> */}
-      <Experience sectionTitle={{ title: "", subtitle: "" }} experiences={[]} />
-      <hr />
-      <Education
-        sectionTitle={{ title: "", subtitle: "" }}
-        educationItems={[]}
-      />
-      <hr />
-      <Skills sectionTitle={{ title: "", subtitle: "" }} skills={[]} />
+      <Container section>
+        <TitleSection
+          title="Resume"
+          subtitle="My professional background"
+          center
+        />
+        <FormatHtml content="<p>Your resume content goes here...</p>" />
+      </Container>
     </>
   </Layout>
 );

@@ -24,10 +24,10 @@ interface Props {
 
 const BlogPost: React.FC<Props> = ({ post, previous, next }) => {
   return (
-    <Layout siteTitle="">
+    <Layout>
       <>
         {/* <SEO title={post.frontmatter.title} /> */}
-        <Container section={true}>
+        <Container section>
           <TitleSection
             title={post.frontmatter.date}
             subtitle={post.frontmatter.title}

@@ -5,7 +5,7 @@ import TestimonialsPage from "./components/Testimonials/page";
 
 export default function Home() {
   return (
-    <Layout siteTitle="Your Site Title">
+    <Layout>
       <>
         {/* <SEO title="About Me" /> */}
         <HeroBanner
