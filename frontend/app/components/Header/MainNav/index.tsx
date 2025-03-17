@@ -10,6 +10,7 @@ const mainNavItems = [
   { title: "About Me", slug: "/" },
   { title: "Resume", slug: "/resume" },
   { title: "Blog", slug: "/blog" },
+  { title: "Projects", slug: "/projects" },
   { title: "Contact Me", slug: "/contact" },
 ];
 

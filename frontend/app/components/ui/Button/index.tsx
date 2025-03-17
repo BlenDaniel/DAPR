@@ -1,39 +1,51 @@
 "use client";
 
-import React, { forwardRef } from "react";
-import { motion, HTMLMotionProps } from "framer-motion";
-import * as Styled from "./styles";
+import React from "react";
+import { Button, StyledProps } from "./styles";
 
-interface MotionButtonProps extends Styled.StyledProps {
+interface ThemedButtonProps
+  extends Omit<StyledProps, "theme" | "size" | "block" | "primary"> {
   children: React.ReactNode;
-  as?: React.ElementType; // Allows for polymorphic behavior
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  theme?: StyledProps["theme"];
+  size?: StyledProps["size"];
+  block?: boolean;
+  primary?: boolean;
+  className?: string;
 }
 
-const MotionStyledButton = motion.create(Styled.Button); // Create a motion version of the styled button
-
-const Button = forwardRef<
-  HTMLElement,
-  MotionButtonProps & HTMLMotionProps<"button">
->(({ primary, block, children, as: Component = "button", ...rest }, ref) => {
-  const otherProps = { ...rest };
-  delete otherProps["data-primary"];
-  delete otherProps["data-block"];
+const ThemedButton: React.FC<ThemedButtonProps> = ({
+  children,
+  onClick,
+  type = "button",
+  disabled = false,
+  theme = "default",
+  size = "medium",
+  block = false,
+  primary = false,
+  className = "",
+  ...rest
+}) => {
+  // For debugging
+  console.log("Button props:", { theme, size, block, primary });
 
   return (
-    <MotionStyledButton
-      as={Component}
-      ref={ref}
-      data-primary={primary?.toString()}
-      data-block={block?.toString()}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      {...otherProps}
+    <Button
+      type={type}
+      onClick={onClick}
+      disabled={disabled ? true : undefined}
+      theme={theme}
+      size={size}
+      block={block}
+      primary={primary}
+      className={className}
+      {...rest}
     >
-      {children as React.ReactNode}
-    </MotionStyledButton>
+      {children}
+    </Button>
   );
-});
+};
 
-Button.displayName = "Button";
-
-export default Button;
+export default ThemedButton;

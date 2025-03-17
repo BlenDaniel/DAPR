@@ -2,60 +2,58 @@
 
 import React, { useState, useEffect } from "react";
 import Layout from "@/app/components/Layout/index";
-import Posts from "@/app/components/Posts";
+import Projects from "@/app/components/Projects";
 
-const BlogPage: React.FC = () => {
-  const [posts, setPosts] = useState([]);
+const ProjectsPage: React.FC = () => {
+  const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [limit, setLimit] = useState(4);
+  const [limit, setLimit] = useState(6);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchProjects = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`/api/blog-posts?limit=${limit}`);
+        const response = await fetch(`/api/projects?limit=${limit}`);
         const data = await response.json();
-        setPosts(data);
+        setProjects(data);
       } catch (error) {
-        console.error("Error fetching blog posts:", error);
+        console.error("Error fetching projects:", error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchPosts();
+    fetchProjects();
   }, [limit]);
 
   const loadMore = () => {
-    setLimit((prevLimit) => prevLimit + 2);
+    setLimit((prevLimit) => prevLimit + 3);
   };
 
   return (
     <Layout>
       <>
-        {/* <SEO title="Blog" /> */}
-        {loading && posts.length === 0 ? (
+        {loading && projects.length === 0 ? (
           <div className="flex justify-center items-center min-h-[300px]">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
           </div>
         ) : (
           <>
-            <Posts
+            <Projects
               sectionTitle={{
-                title: "Blog",
-                subtitle:
-                  "Thoughts and insights on architecture and engineering",
+                title: "My Projects",
+                subtitle: "A showcase of my architectural work",
               }}
-              posts={posts}
+              projects={projects}
             />
 
-            {posts.length >= limit && (
+            {projects.length >= limit && (
               <div className="flex justify-center my-8">
                 <button
                   onClick={loadMore}
                   className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
                 >
-                  Load More Posts
+                  Load More Projects
                 </button>
               </div>
             )}
@@ -66,4 +64,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-export default BlogPage;
+export default ProjectsPage;

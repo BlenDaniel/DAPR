@@ -9,18 +9,18 @@ interface TitleSectionProps {
 }
 
 export const TitleSection = styled.div`
-  ${tw(`flex flex-col w-full mb-8`)}
+  ${tw(`flex flex-col w-full mb-8 text-black items-center`)};
 `;
 
 export const Title = styled.h2<TitleSectionProps>`
-  ${tw(`uppercase mb-4 text-lg font-bold w-full text-left`)};
+  ${tw(`uppercase mt-4 text-3xl font-bold w-full text-center text-blue-900`)};
   &[data-center="true"] {
     ${tw(`text-center`)}
   }
 `;
 
 export const SubTitle = styled.h4<TitleSectionProps>`
-  ${tw(`text-xs text-indigo-600 w-full text-left`)};
+  ${tw(`text-md text-blue-600 w-full text-center`)};
   &[data-center="true"] {
     ${tw(`text-center`)}
   }
@@ -29,16 +29,16 @@ export const SubTitle = styled.h4<TitleSectionProps>`
 export const Separator = styled.h2<TitleSectionProps>`
   ${tw(`relative w-2 h-8 mb-6 -mt-2`)};
   &[data-center="true"] {
-    ${tw(`text-center`)}
+    ${tw(`mx-auto`)}
   }
 
   &:before {
     content: "";
-    ${tw(`bg-indigo-500 h-full w-px absolute left-0`)};
+    ${tw(`bg-blue-500 h-full w-px absolute left-0`)};
   }
 
   &:after {
     content: "";
-    ${tw(`bg-teal-400 h-6 w-px absolute ml-1`)};
+    ${tw(`bg-green-500 h-6 w-px absolute ml-1`)};
   }
 `;

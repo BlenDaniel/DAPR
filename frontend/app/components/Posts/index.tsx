@@ -38,35 +38,28 @@ const Posts: React.FC<PostsProps> = ({ sectionTitle, posts }) => {
         {posts.map((post) => (
           <Styled.Post key={post.id}>
             <Link href={`/blog/${post.slug}`}>
-              <a>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 1 }}
-                >
-                  <Styled.Card>
-                    <Styled.Image>
-                      <Image
-                        src={post.coverImage}
-                        alt={post.title}
-                        layout="fill"
-                        objectFit="cover"
-                      />
-                    </Styled.Image>
-                    <Styled.Content>
-                      <Styled.Date>{post.date}</Styled.Date>
-                      <Styled.Title>{post.title}</Styled.Title>
-                      <Styled.Description>
-                        {post.description}
-                      </Styled.Description>
-                    </Styled.Content>
-                    <Styled.Tags>
-                      {post.tags.map((tag) => (
-                        <Styled.Tag key={tag}>{tag}</Styled.Tag>
-                      ))}
-                    </Styled.Tags>
-                  </Styled.Card>
-                </motion.div>
-              </a>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 1 }}>
+                <Styled.Card>
+                  <Styled.Image>
+                    <Image
+                      src={post.coverImage}
+                      alt={post.title}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </Styled.Image>
+                  <Styled.Content>
+                    <Styled.Date>{post.date}</Styled.Date>
+                    <Styled.Title>{post.title}</Styled.Title>
+                    <Styled.Description>{post.description}</Styled.Description>
+                  </Styled.Content>
+                  <Styled.Tags>
+                    {post.tags.map((tag) => (
+                      <Styled.Tag key={tag}>{tag}</Styled.Tag>
+                    ))}
+                  </Styled.Tags>
+                </Styled.Card>
+              </motion.div>
             </Link>
           </Styled.Post>
         ))}

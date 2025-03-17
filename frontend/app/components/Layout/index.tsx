@@ -6,7 +6,8 @@ import { AnimatePresence } from "framer-motion";
 // import Head from "next/head";
 
 import Footer from "../Footer";
-import Newsletter from "../Newsletter";
+// Remove Newsletter import
+// import Newsletter from "../Newsletter";
 
 import * as Styled from "./styles";
 import Header from "../Header";
@@ -31,15 +32,7 @@ const Layout: React.FC<Props> = ({ children }) => {
             transition={{ delay: 0.2 }}
           >
             {children}
-            <Newsletter
-              newsletter={{
-                namePlaceholder: "string",
-                emailPlaceholder: "string",
-                submitPlaceholder: "string",
-                title: "string",
-                subtitle: "string",
-              }}
-            />
+            {/* Remove Newsletter component */}
             <Footer />
           </MotionDiv>
         </Styled.Layout>

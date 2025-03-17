@@ -10,23 +10,39 @@ export interface InfoBlockProps {
 
 export const InfoBlock = styled.div<InfoBlockProps>`
   ${tw(
-    `flex flex-col my-4 mx-3 p-4 bg-white rounded-lg border border-gray-300`
+    `flex flex-col my-4 mx-3 p-4 bg-white rounded-lg border border-gray-200 items-center text-center`
   )};
-  ${({ center }) => (center ? tw(`items-center`) : "")};
 `;
 
 export const Icon = styled.div`
-  ${tw(`text-2xl text-indigo-600 mb-4`)}
+  ${tw(`text-2xl mb-4`)}
+
+  /* Apply different colors to icons based on their position */
+  &:nth-of-type(4n+1) svg {
+    ${tw(`text-blue-600`)}
+  }
+
+  &:nth-of-type(4n + 2) svg {
+    ${tw(`text-green-600`)}
+  }
+
+  &:nth-of-type(4n + 3) svg {
+    ${tw(`text-yellow-600`)}
+  }
+
+  &:nth-of-type(4n + 4) svg {
+    ${tw(`text-red-600`)}
+  }
 `;
 
 export const Title = styled.h3`
-  ${tw(`text-lg font-bold text-indigo-900 mb-2`)}
+  ${tw(`text-lg font-bold text-black mb-2`)}
 `;
 
 export const Content = styled.p`
-  ${tw(`text-gray-600`)}
+  ${tw(`text-black`)}
 `;
 
 export const Wrapper = styled.div<InfoBlockProps>`
-  ${({ center }) => (center ? tw(`text-center`) : "")};
+  ${tw(`text-center`)};
 `;

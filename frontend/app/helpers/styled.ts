@@ -31,6 +31,9 @@ function interpolateStyles<Props extends AnyProps>(
   };
 }
 
+// List of custom props that should not be passed to DOM elements
+const customProps = ["textSize", "theme", "block", "size", "primary", "as"];
+
 function createStyledComponent<
   Tag extends keyof JSX.IntrinsicElements,
   Props extends AnyProps = AnyProps
@@ -41,8 +44,20 @@ function createStyledComponent<
   >(({ className, ...props }, ref) => {
     const generatedClassName = styleFunction(props as unknown as Props);
     const combinedClassName = `${generatedClassName} ${className || ""}`.trim();
+
+    // Filter out custom props that shouldn't be passed to DOM elements
+    const processedProps = Object.entries(props).reduce((acc, [key, value]) => {
+      // Skip custom props
+      if (customProps.includes(key)) {
+        return acc;
+      }
+      // Convert boolean props to strings to avoid React warnings
+      acc[key] = typeof value === "boolean" ? value.toString() : value;
+      return acc;
+    }, {} as Record<string, unknown>);
+
     return React.createElement(tag, {
-      ...props,
+      ...processedProps,
       className: combinedClassName,
       ref,
     });

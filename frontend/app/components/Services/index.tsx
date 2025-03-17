@@ -1,10 +1,11 @@
-import React from "react";
-import { GetStaticProps } from "next";
+"use client";
 
-import InfoBlock from "../../components/ui/InfoBlock";
-import Container from "../../components/ui/Container";
-import TitleSection from "../../components/ui/TitleSection";
-import { IconProps } from "../../components/ui/Icon";
+import React, { useEffect, useState } from "react";
+
+import InfoBlock from "../ui/InfoBlock";
+import Container from "../ui/Container";
+import TitleSection from "../ui/TitleSection";
+import { IconProps } from "../ui/Icon";
 
 import { SectionTitle } from "../../helpers/definitions";
 
@@ -18,18 +19,71 @@ interface Service {
 }
 
 interface ServicesProps {
-  sectionTitle: SectionTitle;
-  services: Service[];
+  sectionTitle?: SectionTitle;
+  services?: Service[];
 }
 
-const Services: React.FC<ServicesProps> = ({ sectionTitle, services }) => {
+const Services: React.FC<ServicesProps> = ({
+  sectionTitle: initialSectionTitle,
+  services: initialServices,
+}) => {
+  const [sectionTitle, setSectionTitle] = useState<SectionTitle | null>(
+    initialSectionTitle || null
+  );
+  const [services, setServices] = useState<Service[]>(initialServices || []);
+  const [loading, setLoading] = useState<boolean>(
+    !initialSectionTitle || !initialServices
+  );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+
+        // Fetch section title if not provided
+        if (!initialSectionTitle) {
+          const sectionTitleRes = await fetch("/api/services-section");
+          const sectionTitleData = await sectionTitleRes.json();
+          setSectionTitle(sectionTitleData);
+        }
+
+        // Fetch services if not provided
+        if (!initialServices) {
+          const servicesRes = await fetch("/api/services");
+          const servicesData = await servicesRes.json();
+          setServices(servicesData);
+        }
+      } catch (error) {
+        console.error("Error fetching services data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (!initialSectionTitle || !initialServices) {
+      fetchData();
+    }
+  }, [initialSectionTitle, initialServices]);
+
+  if (loading) {
+    return (
+      <Container section={true}>
+        <div className="flex justify-center items-center h-40">
+          <p>Loading services...</p>
+        </div>
+      </Container>
+    );
+  }
+
   return (
     <Container section={true}>
-      <TitleSection
-        title={sectionTitle.title}
-        subtitle={sectionTitle.subtitle}
-        center
-      />
+      {sectionTitle && (
+        <TitleSection
+          title={sectionTitle.title}
+          subtitle={sectionTitle.subtitle}
+          center
+        />
+      )}
       <Styled.Services>
         {services.map((service) => (
           <Styled.ServiceItem key={service.id}>
@@ -43,24 +97,6 @@ const Services: React.FC<ServicesProps> = ({ sectionTitle, services }) => {
       </Styled.Services>
     </Container>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  // Fetch section title data
-  const sectionTitleRes = await fetch("/api/services-section");
-  const sectionTitle: SectionTitle = await sectionTitleRes.json();
-
-  // Fetch services data
-  const servicesRes = await fetch("/api/services");
-  const services: Service[] = await servicesRes.json();
-
-  return {
-    props: {
-      sectionTitle,
-      services,
-    },
-    revalidate: 60, // Revalidate every 60 seconds
-  };
 };
 
 export default Services;

@@ -2,11 +2,12 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 interface Props {
   children: React.ReactNode;
@@ -14,15 +15,31 @@ interface Props {
 
 const Carousel: React.FC<Props> = ({ children }) => (
   <Swiper
-    modules={[Autoplay, Pagination]}
+    modules={[Autoplay, Pagination, Navigation]}
     autoplay={{
       delay: 5000,
       disableOnInteraction: false,
     }}
-    pagination={{ clickable: true }}
-    speed={500}
+    pagination={{
+      clickable: true,
+      dynamicBullets: true,
+    }}
+    navigation={true}
+    speed={800}
     loop={true}
     slidesPerView={1}
+    spaceBetween={30}
+    breakpoints={{
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    }}
   >
     {React.Children.map(children, (child, index) => (
       <SwiperSlide key={index}>{child}</SwiperSlide>

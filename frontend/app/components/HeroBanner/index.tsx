@@ -1,7 +1,7 @@
-import React from "react";
-import { GetStaticProps } from "next";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Banner from "../../components/ui/Banner"; // Adjust the import path as needed
-import { headers } from "next/headers";
 
 interface SectionTitle {
   title: string;
@@ -12,6 +12,7 @@ interface SectionHeroBanner extends SectionTitle {
   content: string;
   linkTo: string;
   linkText: string;
+  photoSrc?: string;
 }
 
 interface HeroBannerProps {
@@ -19,6 +20,25 @@ interface HeroBannerProps {
 }
 
 const HeroBanner: React.FC<HeroBannerProps> = ({ heroBanner }) => {
+  const [logoData, setLogoData] = useState<{ src: string } | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchLogo = async () => {
+      try {
+        const logoRes = await fetch("/api/logo-image");
+        const logo = await logoRes.json();
+        setLogoData(logo);
+      } catch (error) {
+        console.error("Error fetching logo:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchLogo();
+  }, []);
+
   return (
     <Banner
       title={heroBanner.title}
@@ -26,25 +46,10 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ heroBanner }) => {
       content={heroBanner.content}
       linkTo={heroBanner.linkTo}
       linkText={heroBanner.linkText}
+      photoSrc={logoData?.src || heroBanner.photoSrc}
+      isLoading={isLoading}
     />
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  // Fetch hero banner data
-  const res = await fetch(process.env.URL + "/api/hero-banner", {
-    headers: (await headers()) as unknown as HeadersInit,
-    cache: "no-store",
-    method: "GET",
-  });
-  const heroBanner: SectionHeroBanner = await res.json();
-
-  return {
-    props: {
-      heroBanner,
-    },
-    revalidate: 60, // Revalidate every 60 seconds
-  };
 };
 
 export default HeroBanner;

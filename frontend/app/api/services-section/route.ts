@@ -1,10 +1,10 @@
-// app/api/site-metadata/route.ts
 import { NextResponse } from "next/server";
 
 export async function GET() {
+  // Dummy data for services section
   const sectionTitle = {
-    title: "Client Testimonials",
-    subtitle: "What Our Clients Say About Us",
+    title: "My Expertise",
+    subtitle: "Specialized Skills & Services",
   };
 
   return NextResponse.json(sectionTitle);
