@@ -110,21 +110,6 @@ const Projects: React.FC<ProjectsProps> = ({ sectionTitle, projects }) => {
         center
       />
 
-      <ViewToggle>
-        <ToggleButton
-          active={viewMode === "grid"}
-          onClick={() => setViewMode("grid")}
-        >
-          Grid View
-        </ToggleButton>
-        <ToggleButton
-          active={viewMode === "list"}
-          onClick={() => setViewMode("list")}
-        >
-          List View
-        </ToggleButton>
-      </ViewToggle>
-
       <ProjectsWrapper className={viewMode === "list" ? "list-view" : ""}>
         {projects.map((project) => (
           <Link

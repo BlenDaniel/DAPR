@@ -6,6 +6,7 @@ import InfoBlock from "../ui/InfoBlock";
 import Container from "../ui/Container";
 import TitleSection from "../ui/TitleSection";
 import { IconProps } from "../ui/Icon";
+import LoadingSpinner from "../ui/LoadingSpinner";
 
 import { SectionTitle } from "../../helpers/definitions";
 
@@ -69,7 +70,7 @@ const Services: React.FC<ServicesProps> = ({
     return (
       <Container section={true}>
         <div className="flex justify-center items-center h-40">
-          <p>Loading services...</p>
+          <LoadingSpinner size="medium" color="blue-500" />
         </div>
       </Container>
     );

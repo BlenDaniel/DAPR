@@ -6,6 +6,7 @@ import * as Styled from "./styles";
 import Container from "../Container";
 import TitleSection from "../TitleSection";
 import ThemedButton from "../Button";
+import LoadingSpinner from "../LoadingSpinner";
 
 interface Props {
   title: string;
@@ -44,7 +45,9 @@ const Banner: React.FC<Props> = ({
         )}
         {isLoading && (
           <Styled.ProfilePhoto>
-            <div className="w-[200px] h-[200px] rounded-full bg-gray-200 animate-pulse"></div>
+            <div className="w-[200px] h-[200px] rounded-full flex items-center justify-center">
+              <LoadingSpinner size="large" color="blue-500" />
+            </div>
           </Styled.ProfilePhoto>
         )}
         <TitleSection title={title} subtitle={subtitle} center={true} />

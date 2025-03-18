@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <Layout>
       <>
-        {/* <SEO title="About Me" /> */}
         <HeroBanner
           heroBanner={{
             title: "John Smith",

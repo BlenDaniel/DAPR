@@ -16,18 +16,20 @@ interface Skill {
 }
 
 interface SkillsProps {
-  sectionTitle: SectionTitle;
+  sectionTitle?: SectionTitle;
   skills: Skill[];
 }
 
 const Skills: React.FC<SkillsProps> = ({ sectionTitle, skills }) => {
   return (
-    <Container section={true}>
-      <TitleSection
-        title={sectionTitle.title}
-        subtitle={sectionTitle.subtitle}
-        center
-      />
+    <Container section={false}>
+      {sectionTitle && (
+        <TitleSection
+          title={sectionTitle.title}
+          subtitle={sectionTitle.subtitle}
+          center
+        />
+      )}
       <Styled.Skills>
         {skills.map((skill) => (
           <Styled.Skill key={skill.id}>

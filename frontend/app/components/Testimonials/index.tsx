@@ -13,6 +13,7 @@ import Container from "../ui/Container";
 import TitleSection from "../ui/TitleSection";
 import FormatHtml from "../utils/FormatHtml";
 import * as S from "./styles";
+import LoadingSpinner from "../ui/LoadingSpinner";
 
 import { SectionTitle } from "../../helpers/definitions";
 
@@ -90,7 +91,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({
     return (
       <Container section={true}>
         <S.LoadingContainer>
-          <p>Loading testimonials...</p>
+          <LoadingSpinner size="medium" color="blue-500" />
         </S.LoadingContainer>
       </Container>
     );

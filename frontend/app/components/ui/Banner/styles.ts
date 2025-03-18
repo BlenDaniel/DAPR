@@ -16,7 +16,7 @@ export const Content = styled.p`
 `;
 
 export const ProfilePhoto = styled.div`
-  ${tw(`flex justify-center items-center mb-6 mx-auto`)};
+  ${tw(`flex justify-center items-center mt-4 mb-6 mx-auto`)};
 `;
 
 export const ButtonContainer = styled.div`

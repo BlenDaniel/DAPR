@@ -21,7 +21,6 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      {/* Remove Head component as it's not compatible with app router */}
       <AnimatePresence mode="wait">
         <Styled.Layout>
           <Header />
@@ -32,7 +31,6 @@ const Layout: React.FC<Props> = ({ children }) => {
             transition={{ delay: 0.2 }}
           >
             {children}
-            {/* Remove Newsletter component */}
             <Footer />
           </MotionDiv>
         </Styled.Layout>

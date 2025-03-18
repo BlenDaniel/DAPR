@@ -10,7 +10,7 @@ export interface InfoBlockProps {
 
 export const InfoBlock = styled.div<InfoBlockProps>`
   ${tw(
-    `flex flex-col my-4 mx-3 p-4 bg-white rounded-lg border border-gray-200 items-center text-center`
+    `flex flex-col my-4 mx-3 p-4 bg-white rounded-lg border border-gray-200 items-center text-center h-[300px]`
   )};
 `;
 
@@ -44,5 +44,5 @@ export const Content = styled.p`
 `;
 
 export const Wrapper = styled.div<InfoBlockProps>`
-  ${tw(`text-center`)};
+  ${tw(`text-center flex-grow`)};
 `;

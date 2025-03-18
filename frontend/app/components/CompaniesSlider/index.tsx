@@ -11,6 +11,7 @@ import "swiper/css";
 
 import Container from "../ui/Container";
 import TitleSection from "../ui/TitleSection";
+import LoadingSpinner from "../ui/LoadingSpinner";
 
 interface Company {
   id: number;
@@ -43,7 +44,7 @@ const CompaniesSlider: React.FC = () => {
     return (
       <Container section={true}>
         <div className="flex justify-center items-center h-40">
-          <p>Loading partners...</p>
+          <LoadingSpinner size="medium" color="blue-500" />
         </div>
       </Container>
     );

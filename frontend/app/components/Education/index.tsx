@@ -17,7 +17,7 @@ interface EducationItem {
 }
 
 interface EducationProps {
-  sectionTitle: SectionTitle;
+  sectionTitle?: SectionTitle;
   educationItems: EducationItem[];
 }
 
@@ -26,11 +26,13 @@ const Education: React.FC<EducationProps> = ({
   educationItems,
 }) => {
   return (
-    <Container section={true}>
-      <TitleSection
-        title={sectionTitle.title}
-        subtitle={sectionTitle.subtitle}
-      />
+    <Container section={false}>
+      {sectionTitle && (
+        <TitleSection
+          title={sectionTitle.title}
+          subtitle={sectionTitle.subtitle}
+        />
+      )}
 
       {educationItems.map((item) => (
         <Timeline

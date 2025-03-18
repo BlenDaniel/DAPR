@@ -17,7 +17,7 @@ interface ExperienceItem {
 }
 
 interface ExperienceProps {
-  sectionTitle: SectionTitle;
+  sectionTitle?: SectionTitle;
   experiences: ExperienceItem[];
 }
 
@@ -26,11 +26,13 @@ const Experience: React.FC<ExperienceProps> = ({
   experiences,
 }) => {
   return (
-    <Container section={true}>
-      <TitleSection
-        title={sectionTitle.title}
-        subtitle={sectionTitle.subtitle}
-      />
+    <Container section={false}>
+      {sectionTitle && (
+        <TitleSection
+          title={sectionTitle.title}
+          subtitle={sectionTitle.subtitle}
+        />
+      )}
 
       {experiences.map((item) => (
         <Timeline

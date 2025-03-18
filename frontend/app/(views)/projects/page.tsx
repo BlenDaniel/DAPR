@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "@/app/components/Layout/index";
 import Projects from "@/app/components/Projects";
+import LoadingSpinner from "@/app/components/ui/LoadingSpinner";
 
 const ProjectsPage: React.FC = () => {
   const [projects, setProjects] = useState([]);
@@ -35,7 +36,7 @@ const ProjectsPage: React.FC = () => {
       <>
         {loading && projects.length === 0 ? (
           <div className="flex justify-center items-center min-h-[300px]">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+            <LoadingSpinner size="large" color="blue-500" />
           </div>
         ) : (
           <>
